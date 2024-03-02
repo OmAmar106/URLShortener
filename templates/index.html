@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "/static/indexc.css">
+        <title>URL Shortener</title>
+    </head>
+    <body>
+        <h1 class="center-align">URL Shortener</h1>   
+        <br>
+        <br>
+        {%if orignal=='' %}
+            <form class=container action="/" method="POST">
+                <br>
+                <label for = "orignal" class="textcolor">Enter URL:</label>
+                <input type="text" name = "orignal" class = "textbox">
+                <br>
+                <br>
+                <label for = "new" class="textcolor">Shortened URL:</label>
+                <input type = "text" name = "new" class = "textbox">
+                <br>
+                <br>
+                <input type = "submit" class="submit">
+                <br>
+                <br>
+            </form>
+        {% else %}
+            <form class=container action="/" method="POST">
+                <br>
+                <label for = "orignal" class="textcolor">Enter URL:</label>
+                <input type="text" name = "orignal" class = "textbox" value="{{orignal}}">
+                <br>
+                <br>
+                <label for = "new" class="textcolor">Shortened URL:</label>
+                <input type = "text" name = "new" class = "textbox" value = "{{new}}">
+                <br>
+                <br>
+                <input type = "submit" class="submit">
+                <br>
+                <br>
+            </form>
+        {% endif %}
+    </body>
+</html>

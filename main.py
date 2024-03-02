@@ -1,4 +1,4 @@
-from flask import Flask,render_template,redirect,request
+from flask import Flask,render_template, redirect ,request
 from flask_sqlalchemy import SQLAlchemy
 import random
 app = Flask(__name__)
@@ -7,6 +7,7 @@ db = SQLAlchemy(app)
 
 class URL(db.Model):
     __tablename__ = 'URL'
+    id = db.Column(db.Integer,primary_key=True,autoincrement=True)
     OrignalURL = db.Column(db.String)
     NewURL = db.Column(db.String,unique=True)
 
@@ -15,7 +16,7 @@ def randomgenerate():
     st = ''
     for i in range(7):
         randomno = random.randint(0,35)
-        st += L[randomno]
+        st += str(L[randomno])
     r = URL.query.filter_by(NewURL=st).first()
     if r:
         return randomgenerate()
@@ -24,15 +25,19 @@ def randomgenerate():
 @app.route('/',methods=['POST','GET'])
 def index():
     if request.method=='POST':
-        Givenurl = request.form.get('givenurl')
+        Givenurl = request.form.get('orignal')
         c = randomgenerate()
         d = URL(OrignalURL=Givenurl,NewURL=c)
+        db.session.add(d)
+        db.session.commit()
+        curpath = request.url_root+request.path
+        c = curpath+c
         return render_template('index.html',orignal=Givenurl,new=c)
     else:
         return render_template('index.html',orignal='',new='')
     
 @app.route('/<string:s>')
-def redirect(s):
+def newpage(s):
     r = URL.query.filter_by(NewURL=s).first()
     if r:
         return redirect(r.OrignalURL)
@@ -42,4 +47,4 @@ def redirect(s):
 if __name__ =='__main__':
     with app.app_context():
         db.create_all()
-    app.run()
+    app.run(debug=True)
