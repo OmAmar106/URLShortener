@@ -3,6 +3,7 @@
     <head>
         <link rel = "stylesheet" href = "/static/indexc.css">
         <title>URL Shortener</title>
+        <script src="/static/copy.js"></script>
     </head>
     <body>
         <h1 class="center-align">URL Shortener</h1>   
@@ -13,31 +14,30 @@
                 <br>
                 <label for = "orignal" class="textcolor">Enter URL:</label>
                 <input type="text" name = "orignal" class = "textbox">
-                <br>
-                <br>
-                <label for = "new" class="textcolor">Shortened URL:</label>
-                <input type = "text" name = "new" class = "textbox">
-                <br>
-                <br>
+                &nbsp;
                 <input type = "submit" class="submit">
                 <br>
                 <br>
+                <label for = "new" class="textcolor">Shortened URL:</label>
+                <input type = "text" name = "new" type="button" class = "textbox">
+                &nbsp;
+                <button class = "submit" id="cpy" type="button" onclick="myFunction()">Copy</button>
             </form>
-        {% else %}
+            {% else %}
             <form class=container action="/" method="POST">
                 <br>
                 <label for = "orignal" class="textcolor">Enter URL:</label>
                 <input type="text" name = "orignal" class = "textbox" value="{{orignal}}">
-                <br>
-                <br>
-                <label for = "new" class="textcolor">Shortened URL:</label>
-                <input type = "text" name = "new" class = "textbox" value = "{{new}}">
-                <br>
-                <br>
+                &nbsp;
                 <input type = "submit" class="submit">
                 <br>
                 <br>
+                <label for = "new" class="textcolor">Shortened URL:</label>
+                <input type = "text" name = "new" class = "textbox" value = "{{new}}" id="myInput">
+                &nbsp;
+                <button class = "submit" id="cpy" type="button" onclick="myFunction()">Copy</button>
             </form>
+            
         {% endif %}
     </body>
 </html>
