@@ -2,7 +2,7 @@ from flask import Flask,render_template, redirect ,request
 from flask_sqlalchemy import SQLAlchemy
 import random
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']="sqlite:///shorturls.db"
+app.config['SQLALCHEMY_DATABASE_URI']="sqlite:///shorturls.sqlite"
 db = SQLAlchemy(app)
 
 class URL(db.Model):
