@@ -5,7 +5,7 @@ This is a URL Shortener, it will make use of Flask with Python for the backend, 
 
 For the front end, HTML and CSS have been used.
 
-To use this program , you will need to install python ,following that run these 2 lines in command prompt
+To use this program on your local machine, you will need to install python ,following that run these 2 lines in command prompt
 
 <pre> > pip3 install flask</pre>
 
