@@ -19,11 +19,13 @@ Screenshots:
 
 <br>
 
-![image](https://github.com/OmAmar106/URLShortener/assets/142908269/fbaba6f4-3cc6-48e3-be24-555675221fd7)
+![image](https://github.com/OmAmar106/URLShortener/assets/142908269/2cfd095f-e9c2-4d85-8acf-6253de96ee2a)
+
 
 <hr>
 
-![image](https://github.com/OmAmar106/URLShortener/assets/142908269/adb1f21f-12ab-40cb-adee-3cc5d1e08c82)
+![image](https://github.com/OmAmar106/URLShortener/assets/142908269/9146f082-2619-43dd-8199-d511d9f79c1a)
+
 
 
 
