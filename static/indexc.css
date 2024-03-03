@@ -1,30 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Dancing+Script:wght@500&family=Poppins:wght@200;500&display=swap');
+
+body{
+    background-image: url("https://free4kwallpapers.com/uploads/originals/2020/07/22/minimal-landscape-k-wallpaper.png");
+    background-size: cover;
+}
+
 .textbox{
-    width:500px;
+    width:300px;
     height:50px;
     text-align:left;
     background-color:lightskyblue;
     border-radius:15px;
 }
 .center-align{
+    font-size: 70px;
     text-align:center;
+    font-family: "Anta", sans-serif;
+    font-weight: 800;
+    font-style: normal;
 }
 form{
-    border-radius:10px;
-    background-color:green;
+    border-radius:12px;
+    backdrop-filter: blur(30px) saturate(110%);
+    background-color: rgba(159, 187, 238, 0.35);
+    border: 2px solid lightskyblue;
     text-align:center;
 }
-body{
-    background-color:lightblue;
+form:hover{
+    /* transform: scale(1.01); */
+    border: 2px solid black;
+    border: 2px solid rgb(0, 22, 68);
 }
+
 .submit{
     width:100px;
     height:35px;
-    background-color:palegreen
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color:rgb(212, 233, 237);
+    cursor: pointer;
+    animation: transform 1s;
+    color: rgb(0, 22, 68);
+    animation: background-color 1s;
+    animation: color 1s;
+}
+.submit:hover{
+    /* transform: scale(1.1); */
+    box-shadow: 3px 3px 3px rgba(23, 24, 25, 0.35);
+    color: rgb(212, 233, 237);
+    background-color: rgb(0, 22, 68);
 }
 .textcolor{
     font-family:Arial, Helvetica, sans-serif;
-    background-color:violet;
-    border-radius:5px;
+    background-color:rgb(189, 225, 232);
+    border-radius:2px;
+    font-size: 20px;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
 }
 .container{
     margin: 0 auto;
